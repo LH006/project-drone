@@ -1,5 +1,0 @@
-{
-    "configuration": "cpu=atmega328",
-    "board": "arduino:avr:mini",
-    "sketch": "ESC_BEMF_v3_3.ino"
-}
