@@ -1,4 +1,4 @@
-# LibrePilot
+# ESC
 *   Title: ELECTRONOOBS open source electronic speed controller.
 *   Date: 02/04/2019
 *   UPDATE: 06/07/2019
