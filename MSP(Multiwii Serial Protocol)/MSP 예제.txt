@@ -1,0 +1,107 @@
+#define MSP_RC 105
+
+enum MSP_STATE {
+  WAIT_HEADER1,
+  WAIT_HEADER2,
+  WAIT_DIR,
+  WAIT_SIZE,
+  WAIT_CMD,
+  WAIT_DATA,
+  WAIT_CHECKSUM
+};
+
+MSP_STATE state = WAIT_HEADER1;
+
+uint8_t dataSize = 0;
+uint8_t command = 0;
+uint8_t checksum = 0;
+uint8_t offset = 0;
+
+uint8_t payload[64];
+
+void setup() {
+  Serial.begin(115200);   // PC 출력
+  Serial1.begin(115200);  // FC MSP 입력
+  Serial.println("MSP Stream Viewer Start");
+}
+
+void loop() {
+
+  while (Serial1.available()) {
+
+    uint8_t c = Serial1.read();
+
+    switch (state) {
+
+      case WAIT_HEADER1:
+        if (c == '$') state = WAIT_HEADER2;
+        break;
+
+      case WAIT_HEADER2:
+        if (c == 'M') state = WAIT_DIR;
+        else state = WAIT_HEADER1;
+        break;
+
+      case WAIT_DIR:
+        if (c == '<' || c == '>') {
+          checksum = 0;
+          state = WAIT_SIZE;
+        } else {
+          state = WAIT_HEADER1;
+        }
+        break;
+
+      case WAIT_SIZE:
+        dataSize = c;
+        checksum ^= c;
+        offset = 0;
+        state = WAIT_CMD;
+        break;
+
+      case WAIT_CMD:
+        command = c;
+        checksum ^= c;
+
+        if (dataSize == 0)
+          state = WAIT_CHECKSUM;
+        else
+          state = WAIT_DATA;
+        break;
+
+      case WAIT_DATA:
+        payload[offset++] = c;
+        checksum ^= c;
+
+        if (offset >= dataSize)
+          state = WAIT_CHECKSUM;
+        break;
+
+      case WAIT_CHECKSUM:
+        if (checksum == c) {
+
+          // ===== 정상 MSP 프레임 수신 =====
+
+          Serial.print("CMD: ");
+          Serial.print(command);
+          Serial.print(" | DATA: ");
+
+          for (int i = 0; i < dataSize; i++) {
+            Serial.print(payload[i]);
+            Serial.print(" ");
+          }
+
+          // RC 데이터면 THROTTLE 표시
+          if (command == MSP_RC && dataSize >= 2) {
+            int throttle = payload[0] | (payload[1] << 8);
+            Serial.print(" -> THROTTLE: ");
+            Serial.print(throttle);
+          }
+
+          Serial.println();
+        }
+
+        state = WAIT_HEADER1;
+        break;
+    }
+  }
+}
