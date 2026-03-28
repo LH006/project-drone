@@ -5,4 +5,4 @@
 ## 프로젝트 ESP32
 * https://www.elektormagazine.com/labs/esp-fly-the-smallest-esp32-drone-you-can-build
 
-* https://pin.it/6NWxR3qeQ
+* https://circuitdigest.com/articles/litewing-esp32-drone-gets-new-mobile-app?utm_source=Pinterest&utm_medium=organic
