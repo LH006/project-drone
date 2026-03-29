@@ -1,7 +1,7 @@
 # ESP-Drone
 
 ## 링크
-* https://drive.google.com/drive/folders/18QSSe5u8A_p2iix2rqLfaRU-QODWJp0w
+* [구글드라이브 & 도면 & 소스](https://drive.google.com/drive/folders/18QSSe5u8A_p2iix2rqLfaRU-QODWJp0w)
 * https://github.com/Circuit-Digest/ESP-Drone
 
 * ** **[Getting Started](https://docs.espressif.com/projects/espressif-esp-drone/zh_CN/latest/gettingstarted.html)
