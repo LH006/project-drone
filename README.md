@@ -14,6 +14,7 @@
 
 ## 프로젝트 링크
 * https://www.elektormagazine.com/labs/esp-fly-the-smallest-esp32-drone-you-can-build
+* https://circuitdigest.com/microcontroller-projects/DIY-wifi-controlled-drone
 * [sss_ESP8266](https://github.com/SimahoJr/espDrone-Arduino)
 * https://github.com/StefanScheunemann/Arduino-Drone
 * 기본 www.brokking.net
