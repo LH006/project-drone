@@ -1,4 +1,4 @@
-# LITE WING
+# LiteWing-Arduino-Drone
 
 ## 본체
 * [깃허브 소스](https://github.com/Circuit-Digest/LiteWing/tree/main)
