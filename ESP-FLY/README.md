@@ -2,6 +2,7 @@
 
 ## 트론 기종
 * [Crazyflie 2.1+](https://www.bitcraze.io/products/old-products/crazyflie-2-1)
+  - [회로도](https://www.bitcraze.io/products/old-products/crazyflie-2-1/)
 * [Crazyflie 2.0]()
 
 ## 링크
