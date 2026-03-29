@@ -9,6 +9,6 @@
 
 * [sss_ESP8266](https://github.com/SimahoJr/espDrone-Arduino)
 
-## 프로젝트
+## 프로젝트 링크
 * https://github.com/StefanScheunemann/Arduino-Drone
 * 기본 www.brokking.net
