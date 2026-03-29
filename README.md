@@ -5,7 +5,7 @@
 ## 프로젝트 ESP
 * https://www.elektormagazine.com/labs/esp-fly-the-smallest-esp32-drone-you-can-build
 * [LiteWing_ESP32](https://github.com/LH006/project-drone/blob/main/lite-wing/lite-wing.md)
-* [madflight_ESP32](https://github.com/qqqlab/madflight)
+* [madflight_ESP32](https://github.com/LH006/project-drone/blob/main/madflight/README.md)
 
 * [sss_ESP8266](https://github.com/SimahoJr/espDrone-Arduino)
 
