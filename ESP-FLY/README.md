@@ -1,7 +1,7 @@
 # ESP-Drone
 
 ## 트론 기종
-* [Crazyflie 2.1+](https://www.bitcraze.io/products/old-products/crazyflie-2-1)
+* [Crazyflie 2.1+](https://www.bitcraze.io/products/old-products/crazyflie-2-1) STM32F4
   - [회로도](https://www.bitcraze.io/documentation/hardware/crazyflie_2_1/crazyflie_2.1_schematics_rev.b.pdf)
   - [설명서](https://www.bitcraze.io/documentation/hardware/crazyflie_2_1/crazyflie_2_1-datasheet.pdf)
 * [Crazyflie 2.0]()
