@@ -1,5 +1,9 @@
 # ESP-Drone
 
+## 트론 기종
+* Crazyflie 2.1+(https://www.bitcraze.io/products/old-products/crazyflie-2-1)
+* Crazyflie 2.0
+
 ## 링크
 * [구글드라이브 & 도면 & 소스](https://drive.google.com/drive/folders/18QSSe5u8A_p2iix2rqLfaRU-QODWJp0w)
 * https://github.com/Circuit-Digest/ESP-Drone
